@@ -1,0 +1,12 @@
+<a ng-href="#/users/new">新規</a>
+<table border="1">
+  <tr><th>&nbsp;</th><th>氏名</th><th>年齢</th></tr>
+  <tr ng-repeat="user in users">
+        <td>
+          <a ng-href="#/users/{{user._id}}">編集</a>
+          <button ng-click="delete(user._id)">削除</button>
+        </td>
+        <td>{{user.name}}</td>
+        <td>{{user.age}}</td>
+  </tr>
+</table>
