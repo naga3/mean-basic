@@ -7,10 +7,10 @@ var users;
 
 app.use(express.static('front'));
 app.use(bodyParser.json());
+app.listen(3000);
 
 mongodb.MongoClient.connect("mongodb://localhost:27017/test", function(err, database) {
   users = database.collection("users");
-  app.listen(3000);
 });
 
 // 一覧取得
